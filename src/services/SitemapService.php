@@ -300,6 +300,10 @@ class SitemapService extends Component
 		{
 			if ($item->url === null)
 				continue;
+			$indexCustomField = $item->{'index'};
+			if($indexCustomField === false){
+				continue;
+			};
 
 			if ($seoFieldHandle !== null) {
 				/** @var SeoData $seoField */
